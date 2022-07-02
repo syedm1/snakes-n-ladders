@@ -9,17 +9,26 @@ import static src.Utils.PrintToConsole;
 
 public class Main {
     public static void main(String args[]){
+
+        PrintToConsole("Loading rules....");
+
         Rules gameRules = new Rules();
+
+        PrintToConsole("Initialising simulator....");
+
+        GameSimulator simulator = GameSimulator.getInstance();
 
         DiceSimulator.getInstance().setMaxDiceValue(gameRules.dice_max_size);
         DiceInterface dice = DiceSimulator.getInstance();
 
+        BoardBuilderInterface boardBuilder = new BoardGenerator();
+        String[][] board = boardBuilder.generateBoard(gameRules.board_total_count, gameRules.board_width);
 
-        BoardBuilderInterface boardGenerator = new BoardGenerator();
-        String[][] board = boardGenerator.generateBoard(gameRules.board_total_count,gameRules.board_width);
+        simulator.setDiceInterface(dice);
+        simulator.setBoard(board);
 
-        SnakeCharmer _charmer = new SnakeCharmer();
-        _charmer.generateSnakeConfig();
-        PrintToConsole("jumanji");
+        PrintToConsole("Game settings loaded. Successfully.");
+
+
     }
 }
