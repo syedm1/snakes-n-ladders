@@ -1,0 +1,62 @@
+[
+  {
+    "id": 10,
+    "type": "SMALL",
+    "start": 27,
+    "end": 32
+  },
+  {
+    "id": 9,
+    "type": "MEDIUM",
+    "start": 78,
+    "end": 88
+  },
+  {
+    "id": 8,
+    "type": "MEDIUM",
+    "start": 37,
+    "end": 47
+  },
+  {
+    "id": 7,
+    "type": "MEDIUM",
+    "start": 62,
+    "end": 72
+  },
+  {
+    "id": 6,
+    "type": "MEDIUM",
+    "start": 49,
+    "end": 59
+  },
+  {
+    "id": 5,
+    "type": "SMALL",
+    "start": 62,
+    "end": 67
+  },
+  {
+    "id": 4,
+    "type": "SMALL",
+    "start": 78,
+    "end": 83
+  },
+  {
+    "id": 3,
+    "type": "MEDIUM",
+    "start": 38,
+    "end": 48
+  },
+  {
+    "id": 2,
+    "type": "MEDIUM",
+    "start": 56,
+    "end": 66
+  },
+  {
+    "id": 1,
+    "type": "SMALL",
+    "start": 43,
+    "end": 48
+  }
+]

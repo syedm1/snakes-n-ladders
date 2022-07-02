@@ -1,5 +1,6 @@
 package src.Interfaces;
 
 public interface DiceInterface {
-    public int rollDice();
+    int MIN_DICE_VALUE = 1;
+    int rollDice();
 }

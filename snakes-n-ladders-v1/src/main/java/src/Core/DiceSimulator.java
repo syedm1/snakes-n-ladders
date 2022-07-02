@@ -1,14 +1,12 @@
 package src.Core;
 
 import src.Interfaces.DiceInterface;
+import static src.Utils.RandomIntGeneratorInGivenRange;
 
-import java.util.Random;
 
 public class DiceSimulator implements DiceInterface {
     private static DiceSimulator uniqueInstance;
-    private static final int MIN_DICE_VALUE = 1;
-    private static final int MAX_DICE_VALUE = 6;
-    Random random = new Random();
+    private int maxDiceValue = 6;
 
     public static DiceSimulator getInstance() {
         if (uniqueInstance == null) {
@@ -16,8 +14,13 @@ public class DiceSimulator implements DiceInterface {
         }
         return uniqueInstance;
     }
+
+    public void setMaxDiceValue(int maxDiceValue) {
+        this.maxDiceValue = maxDiceValue;
+    }
+
     @Override
     public int rollDice() {
-        return random.nextInt(MIN_DICE_VALUE, MAX_DICE_VALUE);
+        return RandomIntGeneratorInGivenRange(MIN_DICE_VALUE, maxDiceValue);
     }
 }
